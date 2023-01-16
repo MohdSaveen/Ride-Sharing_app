@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/root_layout"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.chip.Chip
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/chip_decline"
+        android:layout_margin="16dp"
+        android:text="@string/decline"
+        android:textColor="@android:color/white"
+        map:chipBackgroundColor="@color/colorAccent"
+        map:chipIcon="@drawable/ic_baseline_clear_24"
+        map:chipIconTint="@android:color/white"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_accept"
+        android:visibility="gone"
+        android:layout_gravity="bottom"
+        android:layout_margin="8dp"
+        map:cardBackgroundColor="@color/colorAccent"
+        map:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_type_uber"
+                    android:layout_marginRight="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/uber_move"
+                    android:text="Uber"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:gravity="center">
+
+                    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:id="@+id/circularProgressBar"
+                        map:cpb_background_progressbar_color="@android:color/white"
+                        map:cpb_background_progressbar_width="3dp"
+                        map:cpb_progress="0"
+                        map:cpb_progress_direction="to_right"
+                        map:cpb_progress_max="100"
+                        map:cpb_progressbar_color="@color/progress_bar_color"
+                        map:cpb_progressbar_width="3dp"
+                        map:cpb_round_border="false"/>
+
+                    <ImageView
+                        android:id="@+id/img_round"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:clickable="false"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_baseline_person_24"
+                        map:tint="@android:color/white" />
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_rating"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:drawableRight="@drawable/ic_baseline_star_24"
+                    android:fontFamily="@font/uber_move"
+                    android:text="4.25"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:id="@+id/txt_estimate_time"
+                android:fontFamily="@font/uber_move_bold"
+                android:text="2 min"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_estimate_distance"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/uber_move"
+                android:text="0.4 km"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/layout_start_uber"
+        android:layout_gravity="bottom"
+        android:layout_margin="8dp"
+        map:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_down_24"/>
+
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/img_start_uber"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_baseline_account_circle_24"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_start_uber_estimate_time"
+                    android:text="1 min"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/img_start_uber"
+                    android:fontFamily="@font/uber_move_bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_start_uber_estimate_distance"
+                    android:text="0.5 km"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/uber_move_bold"
+                    android:layout_toRightOf="@+id/img_start_uber"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_baseline_format_list_bulleted_24" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@android:color/darker_gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_notify_rider"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_notify_rider"
+                    android:gravity="center_horizontal"
+                    android:fontFamily="@font/uber_move"
+                    android:textSize="18sp"
+                    android:text="02:00"/>
+                <ProgressBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="false"
+                    android:id="@+id/progress_notify"
+                    android:min="0"
+                    android:max="120"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/img_phone_call"
+                    android:src="@drawable/ic_baseline_perm_phone_msg_24"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_rider_name"
+                    android:text="Joe"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/uber_move_bold"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/img_three_dot"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_baseline_more_vert_24"/>
+
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.kusu.loadingbutton.LoadingButton
+                    android:layout_width="match_parent"
+                    android:enabled="true"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_start_uber"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="@string/start_uber"
+                    android:textColor="@color/white"
+                    map:lb_buttonColor="@color/colorStartUber"
+                    map:lb_isCircular="false"/>
+
+                <com.kusu.loadingbutton.LoadingButton
+                    android:layout_width="match_parent"
+                    android:enabled="false"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_complete_trip"
+                    android:visibility="gone"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="@string/complete_trip"
+                    android:textColor="@color/white"
+                    map:lb_buttonColor="@color/colorStartUber"
+                    map:lb_isCircular="false"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</FrameLayout>
+

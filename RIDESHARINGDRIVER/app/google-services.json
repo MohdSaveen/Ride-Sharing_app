@@ -1,0 +1,121 @@
+{
+  "project_info": {
+    "project_number": "588752070414",
+    "project_id": "ride-sharing-ffc19",
+    "storage_bucket": "ride-sharing-ffc19.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:588752070414:android:cebed08629c8498350195f",
+        "android_client_info": {
+          "package_name": "com.example.ridesharing_driver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "588752070414-4berhtkik600ikj5lpclllpffb4kp9c1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ridesharing_driver",
+            "certificate_hash": "43c28d30e3cac4560ac5f76ec5aec3deeb9ff968"
+          }
+        },
+        {
+          "client_id": "588752070414-vqt0j7mf4sjsli66d9utpq8km8kqphie.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbMeV0gkwmwLylLhvIDr2vrDgZ9NvxPCA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "588752070414-vqt0j7mf4sjsli66d9utpq8km8kqphie.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:588752070414:android:b3dea252ec8fd88550195f",
+        "android_client_info": {
+          "package_name": "com.example.ridesharing_rider"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "588752070414-bc93um7vl3fk3enjoc5e9143t3tkbvqq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ridesharing_rider",
+            "certificate_hash": "43c28d30e3cac4560ac5f76ec5aec3deeb9ff968"
+          }
+        },
+        {
+          "client_id": "588752070414-vqt0j7mf4sjsli66d9utpq8km8kqphie.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbMeV0gkwmwLylLhvIDr2vrDgZ9NvxPCA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "588752070414-vqt0j7mf4sjsli66d9utpq8km8kqphie.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:588752070414:android:514b0a96db2b494f50195f",
+        "android_client_info": {
+          "package_name": "com.example.ridesharingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "588752070414-orf57nll9esqh0ngum0i5t76svq1r92i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ridesharingapp",
+            "certificate_hash": "43c28d30e3cac4560ac5f76ec5aec3deeb9ff968"
+          }
+        },
+        {
+          "client_id": "588752070414-vqt0j7mf4sjsli66d9utpq8km8kqphie.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbMeV0gkwmwLylLhvIDr2vrDgZ9NvxPCA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "588752070414-vqt0j7mf4sjsli66d9utpq8km8kqphie.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
